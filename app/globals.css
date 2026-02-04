@@ -1,26 +1,398 @@
 @import "tailwindcss";
 
+/* ========================================
+   THEME CONFIGURATION
+   Edit these CSS variables to customize your theme colors
+   All elements automatically inherit these colors
+   ======================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Font families */
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* ========================================
+     LIGHT THEME COLORS
+     ======================================== */
+  
+  /* Background colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-bg-tertiary: #f3f4f6;
+  --color-bg-elevated: #ffffff;
+  
+  /* Text colors */
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #6b7280;
+  --color-text-muted: #9ca3af;
+  --color-text-inverse: #ffffff;
+  
+  /* Border colors */
+  --color-border-primary: #e5e7eb;
+  --color-border-secondary: #d1d5db;
+  --color-border-focus: #3b82f6;
+  
+  /* Accent/Brand colors */
+  --color-accent-primary: #3b82f6;
+  --color-accent-primary-hover: #2563eb;
+  --color-accent-secondary: #8b5cf6;
+  --color-accent-success: #10b981;
+  --color-accent-warning: #f59e0b;
+  --color-accent-danger: #ef4444;
+  
+  /* Interactive element colors */
+  --color-interactive-bg: #f3f4f6;
+  --color-interactive-bg-hover: #e5e7eb;
+  --color-interactive-bg-active: #d1d5db;
+  
+  /* Sidebar specific */
+  --color-sidebar-bg: #f9fafb;
+  --color-sidebar-border: #e5e7eb;
+  --color-sidebar-item-hover: #f3f4f6;
+  --color-sidebar-item-active: #eff6ff;
+  --color-sidebar-item-active-text: #3b82f6;
+  
+  /* Navbar specific */
+  --color-navbar-bg: rgba(255, 255, 255, 0.8);
+  --color-navbar-border: #e5e7eb;
+  
+  /* Card/Surface colors */
+  --color-card-bg: #ffffff;
+  --color-card-border: #e5e7eb;
+  --color-card-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Form elements */
+  --color-input-bg: #ffffff;
+  --color-input-border: #d1d5db;
+  --color-input-border-focus: #3b82f6;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
+/* ========================================
+   DARK THEME COLORS
+   ======================================== */
+.dark {
+  /* Background colors */
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-bg-tertiary: #334155;
+  --color-bg-elevated: #1e293b;
+  
+  /* Text colors */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #0f172a;
+  
+  /* Border colors */
+  --color-border-primary: #334155;
+  --color-border-secondary: #475569;
+  --color-border-focus: #60a5fa;
+  
+  /* Accent/Brand colors */
+  --color-accent-primary: #60a5fa;
+  --color-accent-primary-hover: #3b82f6;
+  --color-accent-secondary: #a78bfa;
+  --color-accent-success: #34d399;
+  --color-accent-warning: #fbbf24;
+  --color-accent-danger: #f87171;
+  
+  /* Interactive element colors */
+  --color-interactive-bg: #334155;
+  --color-interactive-bg-hover: #475569;
+  --color-interactive-bg-active: #64748b;
+  
+  /* Sidebar specific */
+  --color-sidebar-bg: #1e293b;
+  --color-sidebar-border: #334155;
+  --color-sidebar-item-hover: #334155;
+  --color-sidebar-item-active: #1e3a5f;
+  --color-sidebar-item-active-text: #60a5fa;
+  
+  /* Navbar specific */
+  --color-navbar-bg: rgba(15, 23, 42, 0.8);
+  --color-navbar-border: #334155;
+  
+  /* Card/Surface colors */
+  --color-card-bg: #1e293b;
+  --color-card-border: #334155;
+  --color-card-shadow: rgba(0, 0, 0, 0.3);
+  
+  /* Form elements */
+  --color-input-bg: #1e293b;
+  --color-input-border: #475569;
+  --color-input-border-focus: #60a5fa;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   TAILWIND V4 THEME EXTENSION
+   ======================================== */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Map CSS variables to Tailwind */
+  --color-bg-primary: var(--color-bg-primary);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-bg-tertiary: var(--color-bg-tertiary);
+  --color-bg-elevated: var(--color-bg-elevated);
+  
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-tertiary: var(--color-text-tertiary);
+  --color-text-muted: var(--color-text-muted);
+  
+  --color-border-primary: var(--color-border-primary);
+  --color-border-secondary: var(--color-border-secondary);
+  
+  --color-accent: var(--color-accent-primary);
+  --color-accent-hover: var(--color-accent-primary-hover);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ========================================
+   BASE STYLES
+   These apply theme colors to all base elements
+   ======================================== */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
+}
+
+/* Paragraphs and text */
+p {
+  color: var(--color-text-secondary);
+}
+
+/* Links */
+a {
+  color: var(--color-accent-primary);
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-accent-primary-hover);
+}
+
+/* Tables */
+table {
+  background-color: var(--color-card-bg);
+  border-color: var(--color-border-primary);
+}
+
+th {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-primary);
+}
+
+td {
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-primary);
+}
+
+tr:hover {
+  background-color: var(--color-interactive-bg);
+}
+
+/* Form elements */
+input, textarea, select {
+  background-color: var(--color-input-bg);
+  border-color: var(--color-input-border);
+  color: var(--color-text-primary);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-input-border-focus);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Buttons - base reset */
+button {
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Code blocks */
+code {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+}
+
+pre {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Horizontal rules */
+hr {
+  border-color: var(--color-border-primary);
+}
+
+/* Lists */
+ul, ol {
+  color: var(--color-text-secondary);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--color-accent-primary);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-inverse);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-tertiary);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   Reusable themed utility classes
+   ======================================== */
+
+/* Themed backgrounds */
+.bg-themed {
+  background-color: var(--color-bg-primary);
+}
+
+.bg-themed-secondary {
+  background-color: var(--color-bg-secondary);
+}
+
+.bg-themed-elevated {
+  background-color: var(--color-bg-elevated);
+}
+
+/* Themed text */
+.text-themed {
+  color: var(--color-text-primary);
+}
+
+.text-themed-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-themed-muted {
+  color: var(--color-text-muted);
+}
+
+/* Themed borders */
+.border-themed {
+  border-color: var(--color-border-primary);
+}
+
+/* Themed cards */
+.card-themed {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-themed:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* Themed interactive elements */
+.interactive-themed {
+  background-color: var(--color-interactive-bg);
+  transition: background-color 0.15s ease;
+}
+
+.interactive-themed:hover {
+  background-color: var(--color-interactive-bg-hover);
+}
+
+.interactive-themed:active {
+  background-color: var(--color-interactive-bg-active);
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: var(--color-accent-primary);
+  color: var(--color-text-inverse);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-primary-hover);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: var(--color-interactive-bg);
+  color: var(--color-text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-interactive-bg-hover);
 }

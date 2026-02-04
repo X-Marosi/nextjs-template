@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Template - Modern & Production-Ready
 
-## Getting Started
+A modern, production-ready Next.js template with TypeScript, Tailwind CSS v4, collapsible sidebar, top navbar, and built-in dark/light theme system. Perfect for starting new projects with best practices and a clean, organized structure.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=flat-square&logo=tailwind-css)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features
+
+- ⚡ **Next.js 16** - Latest Next.js with App Router
+- 🎨 **Tailwind CSS v4** - Utility-first CSS with CSS variables
+- 🌗 **Dark/Light Mode** - CSS variable-based theming with system preference detection
+- 📐 **Collapsible Sidebar** - Responsive sidebar navigation with persistent state
+- 🔝 **Top Navbar** - Fixed navigation bar with search, notifications, and theme toggle
+- 📱 **Responsive Design** - Mobile-first approach with adaptive layouts
+- 🚀 **TypeScript** - Fully typed for better DX
+- 📁 **Organized Routing** - Example pages (Dashboard, Analytics, Users, Documents, Settings)
+
+## 📁 Project Structure
+
+```
+├── app/                    # Next.js App Router
+│   ├── globals.css         # Theme colors & global styles (EDIT THEME HERE)
+│   ├── layout.tsx          # Root layout with providers
+│   ├── page.tsx            # Home page
+│   ├── dashboard/          # Dashboard route
+│   ├── analytics/          # Analytics route
+│   ├── users/              # Users management route
+│   ├── documents/          # Documents route
+│   └── settings/           # Settings route
+├── components/             # Reusable components
+│   ├── AppShell.tsx        # Main layout wrapper
+│   ├── Navbar.tsx          # Top navigation bar
+│   ├── Sidebar.tsx         # Collapsible sidebar
+│   ├── ThemeToggle.tsx     # Theme switcher button
+│   └── ...
+├── lib/                    # Context providers & utilities
+│   ├── theme-context.tsx   # Theme state management
+│   └── sidebar-context.tsx # Sidebar state management
+└── public/                 # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+ and npm
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/next-tailwind-router-template.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Navigate to the directory
+cd next-tailwind-router-template
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Start the development server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with Turbopack |
+| `npm run build` | Build for production |
+| `npm start` | Start production server |
+| `npm run lint` | Run ESLint |
+
+## 🎨 Theme Customization
+
+All theme colors are defined in **one place**: [`app/globals.css`](app/globals.css)
+
+The CSS variables automatically apply to all HTML elements - no need to manually set colors for each component!
+
+```css
+:root {
+  /* Light theme colors */
+  --color-bg-primary: #ffffff;
+  --color-text-primary: #111827;
+  --color-accent-primary: #3b82f6;
+}
+
+.dark {
+  /* Dark theme colors */
+  --color-bg-primary: #0f172a;
+  --color-text-primary: #f1f5f9;
+  --color-accent-primary: #60a5fa;
+}
+```
+
+### Available CSS Variables
+
+| Variable | Description |
+|----------|-------------|
+| `--color-bg-primary` | Main background color |
+| `--color-bg-secondary` | Secondary/card backgrounds |
+| `--color-text-primary` | Primary text color |
+| `--color-text-secondary` | Secondary text color |
+| `--color-accent-primary` | Brand/accent color |
+| `--color-border-primary` | Border color |
+
+## 🧩 Adding New Routes
+
+1. Create a new folder in `/app` (e.g., `/app/products`)
+2. Add a `page.tsx` file
+3. Add the route to the sidebar in `components/Sidebar.tsx`
+
+## 📱 Responsive Behavior
+
+| Breakpoint | Sidebar | Navbar |
+|------------|---------|--------|
+| Desktop (lg+) | Full sidebar visible, can be collapsed | Full with all elements |
+| Mobile (<lg) | Hidden, accessible via hamburger menu | Condensed with menu button |
+
+## 📦 Tech Stack
+
+- **Framework**: Next.js 16
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Package Manager**: npm
+
+## 📄 License
+
+MIT License - feel free to use this template for any project!
+
+---
+
+Made with ❤️ using Next.js, TypeScript, and Tailwind CSS
