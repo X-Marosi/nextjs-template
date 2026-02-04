@@ -1,6 +1,6 @@
 # Next.js Template - Modern & Production-Ready
 
-A modern, production-ready Next.js template with TypeScript, Tailwind CSS v4, collapsible sidebar, top navbar, and built-in dark/light theme system. Perfect for starting new projects with best practices and a clean, organized structure.
+Next.js template with TypeScript, Tailwind CSS v4. Perfect for starting new projects & testing.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
@@ -9,13 +9,11 @@ A modern, production-ready Next.js template with TypeScript, Tailwind CSS v4, co
 
 ## ✨ Features
 
-- ⚡ **Next.js 16** - Latest Next.js with App Router
-- 🎨 **Tailwind CSS v4** - Utility-first CSS with CSS variables
+- ⚡ **Next.js 16** - Next.js with App Router
+- 🎨 **Tailwind CSS v4** - Utility-first CSS with CSS variables, global colors
 - 🌗 **Dark/Light Mode** - CSS variable-based theming with system preference detection
 - 📐 **Collapsible Sidebar** - Responsive sidebar navigation with persistent state
 - 🔝 **Top Navbar** - Fixed navigation bar with search, notifications, and theme toggle
-- 📱 **Responsive Design** - Mobile-first approach with adaptive layouts
-- 🚀 **TypeScript** - Fully typed for better DX
 - 📁 **Organized Routing** - Example pages (Dashboard, Analytics, Users, Documents, Settings)
 
 ## 📁 Project Structure
@@ -131,7 +129,3 @@ The CSS variables automatically apply to all HTML elements - no need to manually
 ## 📄 License
 
 MIT License - feel free to use this template for any project!
-
----
-
-Made with ❤️ using Next.js, TypeScript, and Tailwind CSS
