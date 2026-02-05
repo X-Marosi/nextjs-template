@@ -7,10 +7,11 @@ Next.js template with TypeScript, Tailwind CSS v4. Perfect for starting new proj
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=flat-square&logo=tailwind-css)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-## ✨ Features
+## 📦 Features
 
 - ⚡ **Next.js 16** - Next.js with App Router
 - 🎨 **Tailwind CSS v4** - Utility-first CSS with CSS variables, global colors
+- 📱 **Responsive Design** - Mobile-first responsive layout
 - 🌗 **Dark/Light Mode** - CSS variable-based theming with system preference detection
 - 📐 **Collapsible Sidebar** - Responsive sidebar navigation with persistent state
 - 🔝 **Top Navbar** - Fixed navigation bar with search, notifications, and theme toggle
@@ -29,6 +30,7 @@ Next.js template with TypeScript, Tailwind CSS v4. Perfect for starting new proj
 │   ├── documents/          # Documents route
 │   └── settings/           # Settings route
 ├── components/             # Reusable components
+│   ├── icons               # Icons folder
 │   ├── AppShell.tsx        # Main layout wrapper
 │   ├── Navbar.tsx          # Top navigation bar
 │   ├── Sidebar.tsx         # Collapsible sidebar
@@ -119,7 +121,7 @@ The CSS variables automatically apply to all HTML elements - no need to manually
 | Desktop (lg+) | Full sidebar visible, can be collapsed | Full with all elements |
 | Mobile (<lg) | Hidden, accessible via hamburger menu | Condensed with menu button |
 
-## 📦 Tech Stack
+## ⚙️Tech Stack
 
 - **Framework**: Next.js 16
 - **Language**: TypeScript
