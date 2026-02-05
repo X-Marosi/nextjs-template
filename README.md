@@ -30,7 +30,7 @@ Next.js template with TypeScript, Tailwind CSS v4. Perfect for starting new proj
 │   ├── documents/          # Documents route
 │   └── settings/           # Settings route
 ├── components/             # Reusable components
-│   ├── icons               # Icons folder
+│   ├── icons/               # Icons folder
 │   ├── AppShell.tsx        # Main layout wrapper
 │   ├── Navbar.tsx          # Top navigation bar
 │   ├── Sidebar.tsx         # Collapsible sidebar
