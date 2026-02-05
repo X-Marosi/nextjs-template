@@ -68,12 +68,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📜 Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server with Turbopack |
-| `npm run build` | Build for production |
-| `npm start` | Start production server |
-| `npm run lint` | Run ESLint |
+| Command         | Description                             |
+| --------------- | --------------------------------------- |
+| `npm run dev`   | Start development server with Turbopack |
+| `npm run build` | Build for production                    |
+| `npm start`     | Start production server                 |
+| `npm run lint`  | Run ESLint                              |
 
 ## 🎨 Theme Customization
 
@@ -99,14 +99,14 @@ The CSS variables automatically apply to all HTML elements - no need to manually
 
 ### Available CSS Variables
 
-| Variable | Description |
-|----------|-------------|
-| `--color-bg-primary` | Main background color |
-| `--color-bg-secondary` | Secondary/card backgrounds |
-| `--color-text-primary` | Primary text color |
-| `--color-text-secondary` | Secondary text color |
-| `--color-accent-primary` | Brand/accent color |
-| `--color-border-primary` | Border color |
+| Variable                 | Description                |
+| ------------------------ | -------------------------- |
+| `--color-bg-primary`     | Main background color      |
+| `--color-bg-secondary`   | Secondary/card backgrounds |
+| `--color-text-primary`   | Primary text color         |
+| `--color-text-secondary` | Secondary text color       |
+| `--color-accent-primary` | Brand/accent color         |
+| `--color-border-primary` | Border color               |
 
 ## 🧩 Adding New Routes
 
@@ -116,10 +116,10 @@ The CSS variables automatically apply to all HTML elements - no need to manually
 
 ## 📱 Responsive Behavior
 
-| Breakpoint | Sidebar | Navbar |
-|------------|---------|--------|
-| Desktop (lg+) | Full sidebar visible, can be collapsed | Full with all elements |
-| Mobile (<lg) | Hidden, accessible via hamburger menu | Condensed with menu button |
+| Breakpoint    | Sidebar                                | Navbar                     |
+| ------------- | -------------------------------------- | -------------------------- |
+| Desktop (lg+) | Full sidebar visible, can be collapsed | Full with all elements     |
+| Mobile (<lg)  | Hidden, accessible via hamburger menu  | Condensed with menu button |
 
 ## 📦 Tech Stack
 

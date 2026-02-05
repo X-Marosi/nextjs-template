@@ -153,21 +153,21 @@ function StatCard({ title, value, change, changeType, icon }: StatCardProps) {
   return (
     <div className="card-themed rounded-xl p-6">
       <div className="flex items-center justify-between">
-        <div className="p-2 rounded-lg bg-[var(--color-accent-primary)]/10 text-[var(--color-accent-primary)]">
+        <div className="p-2 rounded-lg bg-(--color-accent-primary)/10 text-(--color-accent-primary)">
           {icon}
         </div>
         <span
           className={`text-sm font-medium ${
             changeType === "positive"
-              ? "text-[var(--color-accent-success)]"
-              : "text-[var(--color-accent-danger)]"
+              ? "text-(--color-accent-success)"
+              : "text-(--color-accent-danger)"
           }`}
         >
           {change}
         </span>
       </div>
       <h3 className="mt-4 text-2xl font-bold">{value}</h3>
-      <p className="text-sm text-[var(--color-text-tertiary)]">{title}</p>
+      <p className="text-sm text-(--color-text-tertiary)">{title}</p>
     </div>
   );
 }
@@ -181,14 +181,14 @@ interface ActivityItemProps {
 
 function ActivityItem({ title, description, time }: ActivityItemProps) {
   return (
-    <div className="flex items-start gap-3 pb-4 border-b border-[var(--color-border-primary)] last:border-0 last:pb-0">
-      <div className="w-2 h-2 mt-2 rounded-full bg-[var(--color-accent-primary)]" />
+    <div className="flex items-start gap-3 pb-4 border-b border-(--color-border-primary) last:border-0 last:pb-0">
+      <div className="w-2 h-2 mt-2 rounded-full bg-(--color-accent-primary)" />
       <div className="flex-1 min-w-0">
         <p className="font-medium">{title}</p>
-        <p className="text-sm text-[var(--color-text-tertiary)] truncate">
+        <p className="text-sm text-(--color-text-tertiary) truncate">
           {description}
         </p>
-        <p className="text-xs text-[var(--color-text-muted)] mt-1">{time}</p>
+        <p className="text-xs text-(--color-text-muted) mt-1">{time}</p>
       </div>
     </div>
   );

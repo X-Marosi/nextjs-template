@@ -83,7 +83,7 @@ export default function SettingsPage() {
                 }
               />
             </div>
-            <p className="text-sm text-[var(--color-text-muted)] mt-2">
+            <p className="text-sm text-(--color-text-muted) mt-2">
               Select your preferred theme. System will automatically match your
               device settings.
             </p>
@@ -136,21 +136,23 @@ export default function SettingsPage() {
             />
           </div>
           <div className="pt-4">
-            <button className="btn-primary">Save Changes</button>
+            <button className="px-4 py-2 rounded-lg bg-(--color-accent-success) text-white hover:opacity-90 transition-opacity">
+              Save Changes
+            </button>
           </div>
         </div>
       </section>
 
       {/* Danger Zone */}
-      <section className="card-themed rounded-xl p-6 border-[var(--color-accent-danger)]/50">
-        <h2 className="text-xl font-semibold mb-4 text-[var(--color-accent-danger)]">
+      <section className="card-themed rounded-xl p-6 border-(--color-accent-danger)/50">
+        <h2 className="text-xl font-semibold mb-4 text-(--color-accent-danger)">
           Danger Zone
         </h2>
         <p className="mb-4">
           Once you delete your account, there is no going back. Please be
           certain.
         </p>
-        <button className="px-4 py-2 rounded-lg bg-[var(--color-accent-danger)] text-white hover:opacity-90 transition-opacity">
+        <button className="px-4 py-2 rounded-lg bg-(--color-accent-danger) text-white hover:opacity-90 transition-opacity">
           Delete Account
         </button>
       </section>
@@ -180,8 +182,8 @@ function ThemeButton({
       onClick={() => onSelect(value)}
       className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
         isSelected
-          ? "border-[var(--color-accent-primary)] bg-[var(--color-accent-primary)]/10 text-[var(--color-accent-primary)]"
-          : "border-[var(--color-border-primary)] hover:border-[var(--color-border-secondary)]"
+          ? "border-(--color-accent-primary) bg-(--color-accent-primary)/10 text-(--color-accent-primary)"
+          : "border-(--color-border-primary) hover:border-(--color-border-secondary)"
       }`}
     >
       {icon}
@@ -205,7 +207,7 @@ function ToggleSetting({
     <div className="flex items-center justify-between py-2">
       <div>
         <p className="font-medium">{label}</p>
-        <p className="text-sm text-[var(--color-text-muted)]">{description}</p>
+        <p className="text-sm text-(--color-text-muted)">{description}</p>
       </div>
       <label className="relative inline-flex items-center cursor-pointer">
         <input
@@ -213,7 +215,7 @@ function ToggleSetting({
           defaultChecked={defaultChecked}
           className="sr-only peer"
         />
-        <div className="w-11 h-6 bg-[var(--color-interactive-bg)] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[var(--color-accent-primary)]"></div>
+        <div className="w-11 h-6 bg-(--color-interactive-bg) peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-(--color-accent-primary)"></div>
       </label>
     </div>
   );

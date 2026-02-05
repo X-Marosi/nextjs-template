@@ -92,7 +92,7 @@ export default function UsersPage() {
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-1">
           <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[var(--color-text-muted)]"
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-(--color-text-muted)"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -147,19 +147,19 @@ export default function UsersPage() {
               <tr key={user.id}>
                 <td className="px-6 py-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent-primary)] flex items-center justify-center text-[var(--color-text-inverse)] font-medium">
+                    <div className="w-10 h-10 rounded-full bg-(--color-accent-primary) flex items-center justify-center text-(--color-text-inverse) font-medium">
                       {user.name.charAt(0)}
                     </div>
                     <div>
                       <p className="font-medium">{user.name}</p>
-                      <p className="text-sm text-[var(--color-text-muted)]">
+                      <p className="text-sm text-(--color-text-muted)">
                         {user.email}
                       </p>
                     </div>
                   </div>
                 </td>
                 <td className="px-6 py-4 hidden sm:table-cell">
-                  <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-[var(--color-interactive-bg)]">
+                  <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-(--color-interactive-bg)">
                     {user.role}
                   </span>
                 </td>
@@ -167,18 +167,18 @@ export default function UsersPage() {
                   <span
                     className={`px-2.5 py-1 text-xs font-medium rounded-full ${
                       user.status === "active"
-                        ? "bg-[var(--color-accent-success)]/10 text-[var(--color-accent-success)]"
-                        : "bg-[var(--color-text-muted)]/10 text-[var(--color-text-muted)]"
+                        ? "bg-(--color-accent-success)/10 text-(--color-accent-success)"
+                        : "bg-(--color-text-muted)/10 text-(--color-text-muted)"
                     }`}
                   >
                     {user.status}
                   </span>
                 </td>
-                <td className="px-6 py-4 text-[var(--color-text-tertiary)] hidden lg:table-cell">
+                <td className="px-6 py-4 text-(--color-text-tertiary) hidden lg:table-cell">
                   {user.joined}
                 </td>
                 <td className="px-6 py-4 text-right">
-                  <button className="p-2 rounded-lg hover:bg-[var(--color-interactive-bg)] transition-colors">
+                  <button className="p-2 rounded-lg hover:bg-(--color-interactive-bg) transition-colors">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -202,7 +202,7 @@ export default function UsersPage() {
 
       {/* Pagination */}
       <div className="flex items-center justify-between">
-        <p className="text-sm text-[var(--color-text-tertiary)]">
+        <p className="text-sm text-(--color-text-tertiary)">
           Showing {filteredUsers.length} of {mockUsers.length} users
         </p>
         <div className="flex gap-2">

@@ -7,10 +7,10 @@ interface ShowcaseCardProps {
 export function ShowcaseCard({ title, description, icon }: ShowcaseCardProps) {
   return (
     <div className="card-themed p-6 rounded-xl hover:-translate-y-1 transition-all duration-300">
-      {icon && (
-        <div className="mb-4 text-[var(--color-accent-primary)]">{icon}</div>
-      )}
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <div className="flex items-center mb-8 gap-4">
+        {icon && <div className="text-(--color-accent-primary)">{icon}</div>}
+        <h1 className="text-4xl font-semibold mb-2 ">{title}</h1>
+      </div>
       <p>{description}</p>
     </div>
   );

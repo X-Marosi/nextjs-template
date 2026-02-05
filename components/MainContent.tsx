@@ -27,7 +27,7 @@ export function MainContent() {
         <h2 className="text-3xl font-bold text-center mb-8">Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ShowcaseCard
-            title="⚡ Fast & Modern"
+            title="Fast & Modern"
             description="Built with Next.js 16 and React 19 for optimal performance and developer experience"
             icon={
               <svg
@@ -46,7 +46,7 @@ export function MainContent() {
             }
           />
           <ShowcaseCard
-            title="🎨 Tailwind CSS v4"
+            title="Tailwind CSS v4"
             description="Utility-first CSS framework with CSS variables for easy theme customization"
             icon={
               <svg
@@ -65,7 +65,7 @@ export function MainContent() {
             }
           />
           <ShowcaseCard
-            title="🌙 Dark Mode"
+            title="Theme Toggle"
             description="Elegant dark/light theme toggle with CSS variables - edit colors in one place"
             icon={
               <svg
@@ -84,8 +84,8 @@ export function MainContent() {
             }
           />
           <ShowcaseCard
-            title="📱 Responsive Layout"
-            description="Mobile-first design with collapsible sidebar that adapts to all screen sizes"
+            title="Responsive Layout"
+            description="Mobile-first design with collapsible sidebar that adapts to all screen sizes, easily toggle sidebar and navbar visibility"
             icon={
               <svg
                 className="w-12 h-12"
@@ -103,7 +103,7 @@ export function MainContent() {
             }
           />
           <ShowcaseCard
-            title="🚀 TypeScript"
+            title="TypeScript"
             description="Fully typed with TypeScript for enhanced developer experience and fewer runtime errors"
             icon={
               <svg
@@ -122,7 +122,7 @@ export function MainContent() {
             }
           />
           <ShowcaseCard
-            title="🔧 App Router"
+            title="App Router"
             description="Next.js App Router with organized routing structure and layout components"
             icon={
               <svg
@@ -144,7 +144,10 @@ export function MainContent() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="card-themed rounded-xl p-8">
+      <section
+        id="about"
+        className="card-themed rounded-xl p-8 mx-auto max-w-3xl"
+      >
         <h2 className="text-3xl font-bold text-center mb-6">
           About This Template
         </h2>
@@ -187,7 +190,7 @@ export function MainContent() {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap">Dark Mode</td>
                 <td className="px-6 py-4">
-                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-[var(--color-accent-success)] text-white">
+                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-(--color-accent-success) text-white">
                     Active
                   </span>
                 </td>
@@ -198,7 +201,7 @@ export function MainContent() {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap">Sidebar</td>
                 <td className="px-6 py-4">
-                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-[var(--color-accent-success)] text-white">
+                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-(--color-accent-success) text-white">
                     Active
                   </span>
                 </td>
@@ -207,7 +210,7 @@ export function MainContent() {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap">Routing</td>
                 <td className="px-6 py-4">
-                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-[var(--color-accent-success)] text-white">
+                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-(--color-accent-success) text-white">
                     Active
                   </span>
                 </td>
@@ -221,9 +224,8 @@ export function MainContent() {
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-8 border-t border-[var(--color-border-primary)]">
-        <p>Built with Next.js, TypeScript, and Tailwind CSS</p>
-        <p className="mt-2 text-[var(--color-text-muted)]">
+      <footer className="text-center pt-8">
+        <p className="mt-2 text-(--color-text-muted)">
           © 2026 Next.js Template. Ready for your project.
         </p>
       </footer>

@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Template - Modern & Elegant",
+  title: "Page Title",
   description:
-    "A modern Next.js template with Tailwind CSS, dark mode, and responsive layout",
+    "A Next.js template with Tailwind CSS, dark mode, and responsive layout",
 };
 
 export default function RootLayout({
