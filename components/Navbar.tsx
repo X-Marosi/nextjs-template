@@ -40,7 +40,7 @@ export function Navbar() {
           </div>
 
           {/* Right section */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2">
             {/* Theme toggle */}
             <ThemeToggle />
 

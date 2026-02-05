@@ -1,6 +1,7 @@
 # Next.js Template - Modern & Production-Ready
 
-Next.js template with TypeScript, Tailwind CSS v4. Perfect for starting new projects & testing.
+Next.js template with TypeScript, Tailwind CSS v4. Perfect for starting new projects & testing.  
+[🧪 Preview the Template](https://nextjs-template-two-blue.vercel.app/)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
@@ -16,12 +17,13 @@ Next.js template with TypeScript, Tailwind CSS v4. Perfect for starting new proj
 - 📐 **Collapsible Sidebar** - Responsive sidebar navigation with persistent state
 - 🔝 **Top Navbar** - Fixed navigation bar with search, notifications, and theme toggle
 - 📁 **Organized Routing** - Example pages (Dashboard, Analytics, Users, Documents, Settings)
+- 🤖 **Agent Instructions** - Basic instructions to ease AI agent use
 
 ## 📁 Project Structure
 
 ```
 ├── app/                    # Next.js App Router
-│   ├── globals.css         # Theme colors & global styles (EDIT THEME HERE)
+│   ├── globals.css         # Theme colors & global styles
 │   ├── layout.tsx          # Root layout with providers
 │   ├── page.tsx            # Home page
 │   ├── dashboard/          # Dashboard route
