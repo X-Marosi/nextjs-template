@@ -1,7 +1,7 @@
 # Next.js Template - Modern & Production-Ready
 
 Next.js template with TypeScript, Tailwind CSS v4. Perfect for starting new projects & testing.  
-[🧪 Preview the Template](https://nextjs-template-two-blue.vercel.app/)
+🧪 [Preview the Template](https://nextjs-template-two-blue.vercel.app/)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
