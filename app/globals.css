@@ -113,7 +113,7 @@
   --color-sidebar-border: #333;
   --color-sidebar-item-hover: #333;
   --color-sidebar-item-active: #222;
-  --color-sidebar-item-active-text: #fff;
+  --color-sidebar-item-active-text: #ff4500;
   
   /* Navbar specific */
   --color-navbar-bg: #111;
@@ -209,12 +209,11 @@ p {
 
 /* Links */
 a {
-  color: var(--color-accent-primary);
   transition: color 0.15s ease;
 }
 
 a:hover {
-  color: var(--color-accent-primary-hover);
+  color: var(--color-accent-secondary-hover);
 }
 
 /* Tables */
@@ -306,7 +305,7 @@ blockquote {
 
 /* Selection */
 ::selection {
-  background-color: var(--color-accent-primary);
+  background-color: color-mix(in srgb, var(--color-accent-primary) 50%, transparent);
   color: var(--color-text-primary);
 }
 
@@ -315,7 +314,7 @@ blockquote {
   width: 8px;
   height: 8px;
 }
-
+  
 ::-webkit-scrollbar-track {
   background: var(--color-bg-secondary);
 }

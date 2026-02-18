@@ -30,6 +30,7 @@ const mainNavItems: NavItem[] = [
 
 const bottomNavItems: NavItem[] = [
   { name: "Settings", href: "/settings", icon: <SettingsIcon /> },
+  { name: "Sign Out", href: "", icon: <SignOutIcon /> },
 ];
 
 interface SidebarItemProps {
@@ -51,6 +52,7 @@ function SidebarItem({
       onClick={onClick}
       className={`
         flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200
+        min-h-[2.75rem]
         ${isCollapsed ? "justify-center" : ""}
         ${
           isActive
@@ -101,6 +103,7 @@ export function Sidebar({ hasNavbar = true }: { hasNavbar?: boolean }) {
             onClick={toggleCollapse}
             className={`
               hidden lg:flex items-center gap-3 w-full px-2 py-2.5 rounded-lg
+              min-h-[2.75rem]
               text-(--color-text-secondary) hover:bg-(--color-sidebar-item-hover) 
               hover:text-(--color-text-primary) transition-all duration-200
               ${isCollapsed ? "justify-center" : ""}
@@ -110,6 +113,7 @@ export function Sidebar({ hasNavbar = true }: { hasNavbar?: boolean }) {
             <CollapseIcon isCollapsed={isCollapsed} />
             {!isCollapsed && <span>Collapse</span>}
           </button>
+
           {mainNavItems.map((item) => (
             <SidebarItem
               key={item.href}
@@ -132,18 +136,6 @@ export function Sidebar({ hasNavbar = true }: { hasNavbar?: boolean }) {
               onClick={closeMobile}
             />
           ))}
-          <button
-            className={`
-              hidden lg:flex items-center gap-3 w-full px-2 py-2.5 rounded-lg
-              text-(--color-text-secondary) hover:bg-(--color-sidebar-item-hover) 
-              hover:text-(--color-text-primary) transition-all duration-200
-              ${isCollapsed ? "justify-center" : ""}
-            `}
-            title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-          >
-            <SignOutIcon />
-            {!isCollapsed && <span>Sign Out</span>}
-          </button>
         </div>
       </aside>
     </>

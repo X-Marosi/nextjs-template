@@ -15,7 +15,14 @@ export function MainContent() {
           dark mode, and responsive sidebar navigation
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="btn-primary px-8 py-3 text-lg">Get Started</button>
+          <a
+            href="https://github.com/X-Marosi/nextjs-template"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary px-8 py-3 text-lg inline-block text-center"
+          >
+            Get Started
+          </a>
           <button className="btn-secondary px-8 py-3 text-lg">
             Learn More
           </button>
