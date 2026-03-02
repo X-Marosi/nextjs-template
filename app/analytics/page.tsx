@@ -10,10 +10,10 @@ export default function AnalyticsPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="card-themed rounded-xl p-6">
           <h2 className="text-xl font-semibold mb-4">Traffic Overview</h2>
-          <div className="h-64 flex items-center justify-center bg-(--color-bg-secondary) rounded-lg">
+          <div className="h-64 flex items-center justify-center bg-bg-secondary rounded-lg">
             <div className="text-center">
               <svg
-                className="w-16 h-16 mx-auto text-(--color-text-muted)"
+                className="w-16 h-16 mx-auto text-text-muted"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -25,19 +25,17 @@ export default function AnalyticsPage() {
                   d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                 />
               </svg>
-              <p className="mt-2 text-(--color-text-muted)">
-                Chart placeholder
-              </p>
+              <p className="mt-2 text-text-muted">Chart placeholder</p>
             </div>
           </div>
         </div>
 
         <div className="card-themed rounded-xl p-6">
           <h2 className="text-xl font-semibold mb-4">User Engagement</h2>
-          <div className="h-64 flex items-center justify-center bg-(--color-bg-secondary) rounded-lg">
+          <div className="h-64 flex items-center justify-center bg-bg-secondary rounded-lg">
             <div className="text-center">
               <svg
-                className="w-16 h-16 mx-auto text-(--color-text-muted)"
+                className="w-16 h-16 mx-auto text-text-muted"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -55,9 +53,7 @@ export default function AnalyticsPage() {
                   d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
                 />
               </svg>
-              <p className="mt-2 text-(--color-text-muted)">
-                Chart placeholder
-              </p>
+              <p className="mt-2 text-text-muted">Chart placeholder</p>
             </div>
           </div>
         </div>
@@ -65,7 +61,7 @@ export default function AnalyticsPage() {
 
       {/* Metrics Table */}
       <div className="card-themed rounded-xl overflow-hidden">
-        <div className="p-6 border-b border-(--color-border-primary)">
+        <div className="p-6 border-b border-border-primary">
           <h2 className="text-xl font-semibold">Detailed Metrics</h2>
         </div>
         <table className="w-full">
@@ -85,7 +81,7 @@ export default function AnalyticsPage() {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-[var(--color-border-primary)]">
+          <tbody className="divide-y divide-border-primary">
             <MetricRow
               metric="Page Views"
               thisWeek="45,231"
@@ -150,11 +146,7 @@ function MetricRow({
       <td className="px-6 py-4">{lastWeek}</td>
       <td className="px-6 py-4">
         <span
-          className={
-            positive
-              ? "text-(--color-accent-success)"
-              : "text-(--color-accent-danger)"
-          }
+          className={positive ? "text-accent-success" : "text-accent-danger"}
         >
           {change}
         </span>

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Sidebar } from "@/components/Sidebar";
 import { useSidebar } from "@/lib/sidebar-context";
@@ -22,7 +23,7 @@ export function AppShell({
   const showSidebarOnMobile = showNavbar || showSidebar;
 
   return (
-    <div className="flex flex-col min-h-screen bg-(--color-bg-primary)">
+    <div className="flex flex-col min-h-screen bg-bg-primary">
       {/* Top Navbar - show on mobile if either component is enabled, show on desktop based on prop */}
       <div className={showNavbarOnMobile ? "lg:block" : "hidden"}>
         {showNavbar && <Navbar />}

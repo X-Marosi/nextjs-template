@@ -193,11 +193,11 @@ export function MainContent() {
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[var(--color-border-primary)]">
+            <tbody className="divide-y divide-border-primary">
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap">Dark Mode</td>
                 <td className="px-6 py-4">
-                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-(--color-accent-success) text-white">
+                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-accent-success text-white">
                     Active
                   </span>
                 </td>
@@ -208,7 +208,7 @@ export function MainContent() {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap">Sidebar</td>
                 <td className="px-6 py-4">
-                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-(--color-accent-success) text-white">
+                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-accent-success text-white">
                     Active
                   </span>
                 </td>
@@ -217,7 +217,7 @@ export function MainContent() {
               <tr>
                 <td className="px-6 py-4 whitespace-nowrap">Routing</td>
                 <td className="px-6 py-4">
-                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-(--color-accent-success) text-white">
+                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-accent-success text-white">
                     Active
                   </span>
                 </td>
@@ -232,7 +232,7 @@ export function MainContent() {
 
       {/* Footer */}
       <footer className="text-center pt-8">
-        <p className="mt-2 text-(--color-text-muted)">
+        <p className="mt-2 text-text-muted">
           © 2026 Next.js Template. Ready for your project.
         </p>
       </footer>

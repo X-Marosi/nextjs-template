@@ -56,8 +56,8 @@ function SidebarItem({
         ${isCollapsed ? "justify-center" : ""}
         ${
           isActive
-            ? "bg-(--color-sidebar-item-active) text-(--color-sidebar-item-active-text) font-medium"
-            : "text-(--color-text-secondary) hover:bg-(--color-sidebar-item-hover) hover:text-(--color-text-primary)"
+            ? "bg-sidebar-item-active text-sidebar-item-active-text font-medium"
+            : "text-text-secondary hover:bg-sidebar-item-hover hover:text-text-primary"
         }
       `}
       title={isCollapsed ? item.name : undefined}
@@ -88,7 +88,7 @@ export function Sidebar({ hasNavbar = true }: { hasNavbar?: boolean }) {
       <aside
         className={`
           fixed left-0 z-40 flex flex-col
-          bg-(--color-sidebar-bg) border-r border-(--color-sidebar-border)
+          bg-sidebar-bg border-r border-sidebar-border
           transition-all duration-300 ease-in-out
           ${hasNavbar ? "top-16 bottom-0" : "top-0 bottom-0"}
           ${isCollapsed ? "w-16" : "w-64"}
@@ -103,9 +103,9 @@ export function Sidebar({ hasNavbar = true }: { hasNavbar?: boolean }) {
             onClick={toggleCollapse}
             className={`
               hidden lg:flex items-center gap-3 w-full px-2 py-2.5 rounded-lg
-              min-h-[2.75rem]
-              text-(--color-text-secondary) hover:bg-(--color-sidebar-item-hover) 
-              hover:text-(--color-text-primary) transition-all duration-200
+              min-h-11
+              text-text-secondary hover:bg-sidebar-item-hover 
+              hover:text-text-primary transition-all duration-200
               ${isCollapsed ? "justify-center" : ""}
             `}
             title={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
@@ -126,7 +126,7 @@ export function Sidebar({ hasNavbar = true }: { hasNavbar?: boolean }) {
         </nav>
 
         {/* Bottom section */}
-        <div className="px-3 py-4 border-t border-(--color-sidebar-border) space-y-1">
+        <div className="px-3 py-4 border-t border-sidebar-border space-y-1">
           {bottomNavItems.map((item) => (
             <SidebarItem
               key={item.href}

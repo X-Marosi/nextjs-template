@@ -9,7 +9,7 @@ export function Navbar() {
   const { isMobileOpen, toggleMobile } = useSidebar();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-16 bg-(--color-navbar-bg) backdrop-blur-md border-b border-(--color-navbar-border)">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-16 bg-navbar-bg backdrop-blur-md border-b border-navbar-border">
       <div className="h-full px-4 sm:px-6 lg:px-2">
         <div className="flex items-center justify-between h-full">
           {/* Left section */}
@@ -17,7 +17,7 @@ export function Navbar() {
             {/* Mobile menu button */}
             <button
               onClick={toggleMobile}
-              className="lg:hidden p-2 rounded-lg text-(--color-text-secondary) hover:bg-(--color-interactive-bg) hover:text-(--color-text-primary) transition-colors"
+              className="lg:hidden p-2 rounded-lg text-text-secondary hover:bg-interactive-bg hover:text-text-primary transition-colors"
               aria-label={isMobileOpen ? "Close menu" : "Open menu"}
             >
               {isMobileOpen ? <CloseIcon /> : <MenuIcon />}
@@ -26,7 +26,7 @@ export function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="px-4 text-xl sm:text-2xl font-bold text-(--color-text-primary) hover:text-(--color-accent-primary) transition-colors"
+              className="px-4 text-xl sm:text-2xl font-bold text-text-primary hover:text-accent-primary transition-colors"
             >
               NextTemplate
             </Link>
@@ -47,10 +47,10 @@ export function Navbar() {
             {/* User menu placeholder */}
             <div className="hidden sm:flex items-center">
               <button
-                className="flex items-center gap-2 p-1.5 rounded-lg text-(--color-text-secondary) hover:bg-(--color-interactive-bg) transition-colors"
+                className="flex items-center gap-2 p-1.5 rounded-lg text-text-secondary hover:bg-interactive-bg transition-colors"
                 aria-label="User menu"
               >
-                <div className="w-8 h-8 rounded-full bg-(--color-accent-primary) flex items-center justify-center text-(--color-text-inverse) text-sm font-medium">
+                <div className="w-8 h-8 rounded-full bg-accent-primary flex items-center justify-center text-text-inverse text-sm font-medium">
                   <UserIcon />
                 </div>
               </button>
@@ -73,7 +73,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className="text-(--color-text-secondary) hover:text-(--color-text-primary) transition-colors font-medium"
+      className="text-text-secondary hover:text-text-primary transition-colors font-medium"
     >
       {children}
     </Link>
